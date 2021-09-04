@@ -1,14 +1,16 @@
+import { CounterActionsTypes } from '../types/counterTypes';
+
 const initialData = {
   cartCount: 0,
 };
 
 const cartReducer = (state = initialData, action) => {
   switch (action.type) {
-    case 'ADD_ITEM':
+    case CounterActionsTypes.ADD_ITEM:
       return {
         cartCount: ++state.cartCount,
       };
-    case 'REMOVE_ITEM':
+    case CounterActionsTypes.REMOVE_ITEM:
       return {
         cartCount: --state.cartCount,
       };

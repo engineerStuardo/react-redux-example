@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const { cartCount } = useSelector(state => state);
+  const {
+    counter: { cartCount },
+  } = useSelector(state => state);
 
   return (
     <div style={{ backgroundColor: 'orange' }}>

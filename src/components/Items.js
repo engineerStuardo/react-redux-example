@@ -1,14 +1,16 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
+import * as actions from '../Redux/actions/counterActions';
+
 const Items = () => {
   const dispatch = useDispatch();
 
   const addItem = () => {
-    dispatch({ type: 'ADD_ITEM' });
+    dispatch(actions.ADD_ITEM());
   };
   const removeItem = () => {
-    dispatch({ type: 'REMOVE_ITEM' });
+    dispatch(actions.REMOVE_ITEM());
   };
 
   return (
